@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Ad340-Projects</string>
+    <string name="editTextTextPersonName">Enter Name</string>
+    <string name="buttonInfo">Info</string>
+    <string name="buttonCities">Cities</string>
+    <string name="buttonMovies">Movies</string>
+    <string name="buttonParks">Parks</string>
+    <string name="buttonTraffic">Traffic</string>
+    <string name="textViewInfo">I\'m Jafar Eslamikhah, like to be called Cyrus. Love hiking, biking, montainering and advantures.
+        Currently student at North Seattle College, pursuing BAS AP development.</string>
+    <string name="imageView">Cyrus In Wenatchee</string>
+    <string name="textViewt">Movie Details</string>
+    <string name="textview3">Title</string>
+    <string name="textview4">Year</string>
+    <string name="textview5">Director</string>
+    <string name="textview6">Description</string>
+    <string name="textview1">Title</string>
+    <string name="textview2">Year</string>
+    <string name="label">Movies List</string>
+    <string name="textviewindex">1</string>
+</resources>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+tools:context=".MoviesList">
+
+<TextView
+    android:id="@+id/label"
+    android:layout_width="match_parent"
+    android:layout_height="83dp"
+    android:padding="10sp"
+    android:text="@string/label"
+    android:textSize="24sp"
+    android:textStyle="bold"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintBottom_toTopOf="@+id/listview_1"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="1.0"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+
+    app:layout_constraintVertical_bias="1.0"
+    tools:text="@string/label" />
+
+<ListView
+    android:id="@+id/listview_1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:contextClickable="true"
+    android:divider="@android:drawable/divider_horizontal_textfield"
+    android:foregroundTint="#DAD4D4"
+    app:layout_constraintBottom_toTopOf="@+id/label"
+    app:layout_constraintTop_toTopOf="@+id/label"
+    tools:visibility="visible" />
+
+</LinearLayout>
