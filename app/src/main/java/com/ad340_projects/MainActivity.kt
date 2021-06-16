@@ -9,9 +9,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val button: Button = findViewById(R.id.buttonMovies)
-        button.setOnClickListener {
+        val buttonMovies: Button = findViewById(R.id.buttonMovies)
+        buttonMovies.setOnClickListener {
             val intent = android.content.Intent(this, MoviesList::class.java)
+            startActivity(intent)
+        }
+        val buttonInfo: Button = findViewById(R.id.buttonInfo)
+        buttonInfo.setOnClickListener {
+            val intent = android.content.Intent(this, SignupActivity::class.java)
             startActivity(intent)
         }
     }
