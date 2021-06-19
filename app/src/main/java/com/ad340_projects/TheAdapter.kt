@@ -27,3 +27,4 @@ class TheAdapter (var mCtx: Context, var resources:Int, var items:List<Model>):
         return view
     }
 }
+

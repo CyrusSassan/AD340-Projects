@@ -8,7 +8,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+title = "Curus AD340 Projects"
         val buttonMovies: Button = findViewById(R.id.buttonMovies)
         buttonMovies.setOnClickListener {
             val intent = android.content.Intent(this, MoviesList::class.java)
@@ -19,5 +19,12 @@ class MainActivity : AppCompatActivity() {
             val intent = android.content.Intent(this, SignupActivity::class.java)
             startActivity(intent)
         }
+
+        val buttonTraffic: Button = findViewById(R.id.buttonTraffic)
+        buttonTraffic.setOnClickListener {
+            val intent = android.content.Intent(this, TrafficCameraActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }

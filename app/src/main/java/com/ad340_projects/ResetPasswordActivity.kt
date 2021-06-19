@@ -25,7 +25,7 @@ class ResetPasswordActivity : AppCompatActivity() {
         btnReset = findViewById<View>(R.id.btn_reset_password) as Button
         btnBack = findViewById<View>(R.id.btn_back) as Button
         auth = FirebaseAuth.getInstance()
-
+title = "Reset Password"
         btnBack!!.setOnClickListener{
             val intent = Intent(this, ResetPasswordActivity::class.java,)
                 finish()

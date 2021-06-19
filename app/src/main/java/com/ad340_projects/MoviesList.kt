@@ -5,15 +5,9 @@ import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
-import android.widget.AdapterView.OnItemClickListener
 import android.widget.ListView
-import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.graphics.component1
-import androidx.core.graphics.component2
-import androidx.core.graphics.component3
-import androidx.core.graphics.component4
 import java.io.Serializable
 import java.util.*
 
@@ -22,6 +16,8 @@ class MoviesList : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_movies_list)
+
+        title = "Movies"
         val movies = arrayOf(
             arrayOf(
                 "Night of the Comet",
@@ -172,7 +168,7 @@ class MoviesList : AppCompatActivity() {
             )
         )
 
-        var listView = findViewById<ListView>(R.id.listview_1)
+        var listView = findViewById<ListView>(R.id.listview_2)
         var list = mutableListOf<Model>()
         val mutableListIterator = list.listIterator()
         for (i in movies.indices) {
@@ -223,11 +219,6 @@ class MoviesList : AppCompatActivity() {
                 appInfo.putExtra("img", imgjpg)
 
                 startActivity(appInfo)
-
-                //val intent = Intent(this, MovieDetail::class.java)
-                //startActivity(intent)
-
-
 
             }
         }

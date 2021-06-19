@@ -10,6 +10,7 @@ class MovieDetail : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_movie_detail)
 
+        title = "Movie Details"
         var textView3 = findViewById<TextView>(R.id.textview3)
         val title = intent.getSerializableExtra("title")
         textView3.text = title.toString()
