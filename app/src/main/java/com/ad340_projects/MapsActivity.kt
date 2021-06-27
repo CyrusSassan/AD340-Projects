@@ -102,13 +102,13 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                         for (i in 0 until jsonArray.length() - 1) {
 
                             //val cameras = jsonObj.getJSONObject("Description")
-                            val jsonArray = jsonObj.getJSONArray("Features").getJSONObject(i)
+                            val jsonArray1 = jsonObj.getJSONArray("Features").getJSONObject(i)
                             //val jsonArray = jsonObj.getJSONArray("Cameras")
-                            var cam = jsonArray.getJSONArray("Cameras")
+                            var cam = jsonArray1.getJSONArray("Cameras")
                             val descrip = cam.getJSONObject(0)
                             val des = descrip.getString("Description")
 
-                            val latArray = jsonArray.getJSONArray("PointCoordinate")
+                            val latArray = jsonArray1.getJSONArray("PointCoordinate")
 //                            val latObject = latArray.getJSONObject(0)
                             val latitude = latArray.getString(0).toDouble()
                             val longitude = latArray.getString(1).toDouble()

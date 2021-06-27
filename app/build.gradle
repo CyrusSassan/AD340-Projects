@@ -9,6 +9,16 @@ plugins {
 }
 
 android {
+    signingConfigs {
+        debug {
+            storeFile file('C:\\Users\\syrus\\Documents\\College\\Spring2021\\AD340\\Assignments\\Ad340Projects\\keystore.jks')
+            keyAlias 'key1'
+        }
+        real {
+            storeFile file('C:\\Users\\syrus\\Documents\\College\\Spring2021\\AD340\\Assignments\\Ad340Projects\\keystore.jks')
+            keyAlias 'uploadR'
+        }
+    }
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
 
@@ -26,8 +36,8 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            debuggable true
-            renderscriptDebuggable true
+            debuggable false
+            renderscriptDebuggable false
         }
     }
     compileOptions {
