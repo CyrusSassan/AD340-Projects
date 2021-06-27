@@ -13,11 +13,11 @@ class trafficAdapter (var tCtx: Context, var resources:Int, var items:List<traff
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
         val layoutInflater: LayoutInflater = LayoutInflater.from(tCtx)
         val view: View = layoutInflater.inflate(resources, null)
-        val imageView: ImageView = view.findViewById(R.id.image)
-        val titleTextView: TextView = view.findViewById(R.id.wrap_content)
+        val imageView: ImageView = view.findViewById(R.id.imageView)
+        val titleTextView: TextView = view.findViewById(R.id.textViewResult)
 
         var vItems:trafficModel = items[position]
-        imageView.setImageDrawable(tCtx.resources.getDrawable(vItems.img))
+        //imageView.setImageDrawable(tCtx.resources.getDrawable(vItems.img))
         titleTextView.text = vItems.description
         return view
     }

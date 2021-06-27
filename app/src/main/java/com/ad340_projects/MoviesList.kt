@@ -184,10 +184,6 @@ class MoviesList : AppCompatActivity() {
 
             mutableListIterator.add(Model(movies[i][0], movies[i][1],"", "", resID, i.toString() ))
 
-
-
-
-
             listView.adapter = TheAdapter(this, R.layout.movieslist, list)
 
             listView.setOnItemClickListener { parent: AdapterView<*>, view: View, position: Int, id: Long ->

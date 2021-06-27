@@ -26,6 +26,13 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        val actionBar = supportActionBar
+        if (actionBar != null) {
+            actionBar.title = "Login"
+            actionBar.setDisplayHomeAsUpEnabled(true)
+            actionBar.setDisplayShowHomeEnabled(true)
+        }
+
         //Get Firebase auth instance
         auth = FirebaseAuth.getInstance()
         if (auth!!.currentUser != null) {
@@ -36,8 +43,8 @@ class LoginActivity : AppCompatActivity() {
         // set the view
         setContentView(R.layout.activity_login)
         title = "Login"
-        val toolbar: Toolbar = findViewById<View>(R.id.toolbar) as Toolbar
-        setSupportActionBar(toolbar)
+       // val toolbar: Toolbar = findViewById<View>(R.id.toolbar) as Toolbar
+       // setSupportActionBar(toolbar)
         inputEmail = findViewById<View>(R.id.email) as EditText
         inputPassword = findViewById<View>(R.id.password) as EditText
         btnSignup = findViewById<View>(R.id.btn_signup) as Button
@@ -89,6 +96,12 @@ class LoginActivity : AppCompatActivity() {
                                     }
                                 } else {
                                     startActivity(intent)
+                                    Toast.makeText(
+                                        this@LoginActivity,
+                                        getString(R.string.auth_success),
+                                        Toast.LENGTH_LONG
+                                    ).show()
+
                                     finish()
                                 }
                             }

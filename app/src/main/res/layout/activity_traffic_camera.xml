@@ -7,12 +7,15 @@
     tools:context=".TrafficCameraActivity">
 
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="400dp"
+        android:layout_height="710dp"
         android:padding="16sp"
-        tools:context=".MainActivity"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="170dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".MainActivity">
+
 
         <ListView
             android:id="@+id/listview_2"
@@ -23,28 +26,34 @@
             android:contextClickable="true"
             android:divider="@android:drawable/divider_horizontal_textfield"
             android:foregroundTint="#DAD4D4"
-            app:layout_constraintBottom_toTopOf="@+id/label"
             tools:visibility="visible" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="21dp"
-            android:layout_marginTop="50dp"
-            android:layout_marginEnd="36dp"
-            android:text="Seattle Traffic Camaras"
-            android:textAlignment="center"
-            android:textColor="@android:color/holo_green_dark"
-            android:textSize="32sp"
-            android:textStyle="bold" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="114dp"
+            android:layout_height="108dp"
+            android:layout_above="@+id/btnParse"
+            android:layout_marginTop="313dp"
+            android:layout_marginEnd="-110dp"
+            android:layout_marginBottom="479dp"
+            android:layout_toStartOf="@+id/textViewResult"
+            android:contentDescription="Image"
+            android:src="@mipmap/ic_launcher" />
 
         <TextView
             android:id="@+id/textViewResult"
-            android:layout_width="wrap_content"
+            android:layout_width="239dp"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
+
+            android:layout_above="@+id/btnParse"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="128dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="17dp"
+            android:layout_marginBottom="509dp"
+            android:text="list"
             android:textColor="@android:color/black"
             android:textSize="20sp" />
 
@@ -52,10 +61,12 @@
             android:id="@+id/btnParse"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+
+            android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_centerInParent="true"
-            android:layout_marginBottom="20sp"
-            android:text="Parse JSON" />
+            android:layout_marginEnd="144dp"
+            android:layout_marginBottom="41dp"
+            android:text="@string/btnParse" />
 
     </RelativeLayout>
 

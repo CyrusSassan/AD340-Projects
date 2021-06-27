@@ -19,7 +19,12 @@ class SignupActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup)
-title = "Sign Up"
+        val actionBar = supportActionBar
+        if (actionBar != null) {
+            actionBar.title = "Sign Up"
+            actionBar.setDisplayHomeAsUpEnabled(true)
+            actionBar.setDisplayShowHomeEnabled(true)
+        }
         //Get Firebase auth instance
         auth = FirebaseAuth.getInstance()
         val btnSignIn = findViewById<View>(R.id.sign_in_button) as Button
